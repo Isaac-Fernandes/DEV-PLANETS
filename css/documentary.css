@@ -1,0 +1,213 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body{
+    background: black;
+}
+
+/*Configuração para logo*/
+label.logo{/*logo*/
+    color: red;
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*Todas as configurações da NAVBAR*/
+nav{ /*Configuração para NAVBAR*/
+    background: black;/*Cor da NAVBAR*/
+    height: 80px;
+    width: 100%;
+}
+
+nav ul{/*Leva os links para a direita*/
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{/*Transforma os links de coluna para lista*/
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{/*Configuração para os links*/
+    color: white;/*Cor dos links*/
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+nav a:hover{/*Trocar a cor dos links ao passar o mouse por cima*/
+    color: grey;/*Cor de quando o mouse passar o mouse por cima*/
+}
+
+/*Configuração para o ícone*/
+.checkbtn{
+    font-size: 30px;/*tamanho ícone*/
+    color: white;/*Cor da logo*/
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;/*quando o mouse passa por cima aparece uma mão*/
+    display: none;/*O ícone não aparece quando não está responsivo*/
+}
+
+#check{
+    display: none;/*Para sair uma caixinha de verificação*/
+}
+
+/*Foto de fundo de um documentário e sua descrição*/
+.document_page{
+    background-image: url(../img/documentários/Atari\ game\ over2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 576px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.document_page .document_container{
+    width: 90%;
+    margin-left: 20px;
+}
+
+
+.document_page .titulo{
+    color: white;
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.document_page .titulo span{
+    color: rgb(21, 230, 21);
+    margin-left: 15px;
+}
+
+.descricao_document span{
+    color: rgb(21, 230, 21);
+}
+
+.document_page .info, .descricao_document, .creator{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1%;
+    margin-left: 30px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.document_page .info span{
+    padding: 7px; 
+}
+
+.botao{
+    background-color: black;
+    border: none;
+    color: white;
+    margin-top: 1%;
+    padding: 15px 30px;
+    margin-left: 30px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .5s ease all;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+/*Agora é a parte do catalogo dos filmes*/
+.document-catalog{
+    color: white;
+    background: gray;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.documentary{
+    display: inline-block;
+    width: 180px;
+    background: gray;
+ }
+ 
+ .documentary img{
+     width: 100%;
+     height:auto;
+ }
+ 
+ .desc{
+     padding: 15px;
+     text-align: center;
+     background: gray;
+     color: white;
+     cursor: pointer;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 16px;
+ }
+ 
+ .desc:hover{
+     color: black;
+ }
+
+/*Estrutura do load*/
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: slateblue;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: blue;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading{
+    from{
+      transform: rotate(0turn);
+    }
+    to{
+      transform: rotate(1turn);
+    }
+}
+
+ 

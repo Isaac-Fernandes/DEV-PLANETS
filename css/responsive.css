@@ -1,0 +1,342 @@
+/*área da resposividade do login*/
+@media (max-width:1204px){
+    .wrapper {
+        width:90%
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    .group{
+        border: 1px solid red;
+    }
+
+    .planets{
+        display: none;
+    }
+
+    .aparelhos{
+        display: block;
+    }
+
+    .gadgets img{
+        height: 200px;
+    }
+
+    .pergunta{
+        max-height: 200px;
+    }
+    
+}
+
+@media (max-width:800px) {
+    .wrapper{
+        width: 90%;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    .group{
+        border: 1px solid red;
+    }
+
+    .planets{
+        display: none;
+    }
+
+    .aparelhos{
+        display: block;
+    }
+
+    .descricao h1{
+        font-size: 28px;
+    }
+    
+    .descricao h2{
+        font-size: 18px;
+    }
+
+    .gadgets img{
+        height: 170px;
+    }
+
+    .pergunta{
+        max-height: 200px;
+    }
+}
+
+/*área da resposividade do navbar e do logo*/
+@media (max-width: 1024px){/*Para celular*/
+    label.logo{
+        font-size: 20px;
+        padding-left: 40px ;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 800px){
+    .checkbtn{/*Agora o ícone aparece pois está responsivo*/
+        display: block;
+    }
+
+    ul{/*Lista de links responsivo*/
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: black;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+}
+/*área da resposividade do modal*/
+@media (max-width: 800px){/*Para tablet*/
+    .toque{
+        margin-left: 360px;
+    }
+}
+
+@media (max-width:360px){/*Para celular*/
+    .toque{
+        margin-left:160px;
+    }  
+}
+
+
+/*área da resposividade do filme*/
+@media (max-width:768px){/*Para celular*/
+    .movie_page{
+        height: 630px;
+        width: 100%;
+        
+    }
+    .movie_page .titulo{
+        font-size: 30px;
+    }
+
+    .movie_page .info, .descricao_movie{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .creator{
+        font-size: 12px;
+    }
+
+    .botao{
+        margin-left: 30px;
+    }
+
+    .movie-catalog{
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .movies {
+        width: 121px;
+    }
+
+    .desc{
+        padding: 2px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width:768px) and (max-height: 1204px){ /*Para tablets*/
+    .movie_page .titulo{
+        font-size: 35px;
+    }
+
+    .movie_page .info, .descricao_movie, .creator{
+        font-size: 20px;
+        margin-top: 4px;
+    }
+
+    .botao{
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+
+    .movie-catalog{
+        height: 48px;
+        font-size: 30px;
+    }
+    
+    .movies {
+        width: 121px;
+        margin-left: 23px;
+    }
+
+    .desc{
+        padding: 2px;
+        font-size: 12px;
+    }
+}
+
+/*área da resposividade do documentario*/
+@media (max-width:768px){/*Para celular*/
+    .document_page{
+        height: 630px;
+        width: 100%;
+    }
+
+    .document_page .titulo{
+        font-size: 25px;
+    }
+
+    .document_page .info, .descricao_document, .creator{
+        font-size: 17px;
+        margin-right: 20px;
+    }
+
+    .botao{
+        margin-left: 30px;
+    }
+
+    .document-catalog{
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .documentary{
+        width: 121px;
+        margin-left: 40px;
+        margin-top: 13px;
+    }
+    
+    .desc{
+        padding: 2px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width:768px) and (max-height: 1204px){/*Para tablets*/
+    .document_page .titulo{
+        font-size: 35px;
+        margin-top: 4px;
+    }
+
+    .document_page .info, .descricao_document, .creator{
+        font-size: 20px;
+        margin-top: 4px;
+    }
+
+    .botao{
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+
+    .document-catalog{
+        height: 46px;
+        font-size: 30px;
+    }
+    
+    .documentary {
+        width: 121px;
+        margin-left: 22px;
+    }
+
+    .desc{
+        padding: 2px;
+        font-size: 14px;
+    }
+}
+
+/*área da resposividade do livros*/
+@media (min-width:768px) and (max-height: 1204px){/*Para tablets*/
+    .book_page img{
+        height: 340px;
+        margin-left: 10px;
+    }
+
+    .book_page .titulo{
+        font-size: 22px;
+    }
+
+    .book_page .book_container{
+        font-size: 10px;
+    }
+
+    .book_page .descricao_book .creator{
+        font-size: 17px;
+    }
+
+    .botao{
+        font-size: 10px;
+    }
+
+    .livros-catalog{
+        height: 45px;
+        font-size: 20px;
+    }
+    
+    .livros {
+        width: 130px;
+        margin-left: 20px; 
+    }
+
+    .desc{
+        padding: 2px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width:768px){/*Para celular*/
+    .book_page img{
+        display: none;
+    }
+
+    .book_page .titulo{
+        font-size: 25px;
+        margin-top: 6px;
+    }
+
+    .book_page .descricao_book{
+        font-size: 18px;
+    }
+
+    .creator{
+        font-size: 14px;
+    }
+
+
+    .botao{
+        margin-left: 30px;
+    }
+
+    .livros-catalog{
+        height: 40px;
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    
+    .livros {
+        width: 121px;
+    }
+
+    .desc{
+        padding: 2px;
+        font-size: 12px;
+    }
+}

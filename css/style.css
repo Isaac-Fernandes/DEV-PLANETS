@@ -1,0 +1,278 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+
+}
+    
+
+body{
+    background: url(../img/fundo-do-login.jpg);/*Imagem de fundo do site*/
+    background-repeat: no-repeat;
+    background-size:auto;
+    height: auto;
+    width: auto;
+    margin-top: 2.7cm;
+    margin-bottom: 500px;
+}
+/*toda a estrutura da area de login e do planeta fica aqui*/
+.planets{
+    float: left;
+}
+
+.planets img{
+    width: 400px;
+    margin-left: 40px;
+    margin-right: 100px;
+
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 60%;
+    height: 100vh;
+
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 30%;
+    min-height: 34rem;
+    text-align: center;
+    float: both;
+    margin-top: 50px;
+}
+
+.group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    padding: 1.3rem 0;
+    border: 1px solid red;
+}
+
+.group:nth-child(1){
+    min-height: 19rem;
+}
+
+.logo{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.Foto_perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.Foto_perfil img{
+    height: 6rem;
+}
+
+.login{
+    background-color: blue;
+    color: rgb(243, 243, 243);
+    padding: 8px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.logout{
+    color: rgb(248, 4, 4);
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+.not-account{
+    color: rgb(235, 31, 31);
+}
+
+.blue{
+    color: blue;
+
+}
+
+.apps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+    color: white;
+    font-size: 20px;
+}
+
+.download{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+
+.app-download{
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+.app-download:nth-child(1)img{
+    max-width: 200px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+}
+
+.app-download:nth-child(2)img{
+    max-width: 200px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+}
+/*Estrutura da imagem de todos os aparelhos */
+.aparelhos{
+    display: flex;
+    background: black;
+    padding: 70px 45px;
+    border-top: 10px rgb(68, 0, 255) solid;
+
+
+}
+
+.gadgets img{
+    height: 300px;
+}
+
+.descricao{
+    margin-top: 50px;
+    
+}
+
+.descricao h1,h2{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(1em, 1em + 1vw, 1.5em);
+    
+}
+
+.descricao h1{
+    text-align: center;
+    margin: 0px 0px 8px;
+    font-size: 40px;
+}
+
+.descricao h2{
+    text-align: justify;
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+.clear{
+    clear: both;
+}
+
+/*Area onde fica as perguntas frequentes*/
+.section2{
+    background: black;
+    position: relative;
+}
+
+
+.pergunta{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    box-shadow: 1px 1px 3px  rgba(0, 0, 0, .25);
+    border-radius: 4px;
+    border: solid 1px blue;
+    border-top: 10px black;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.titulo{
+    cursor: pointer;
+    font-weight: 600;
+    padding: 16px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+footer h1{
+    text-align: center;
+    background: black;
+    border-top: 10px solid blue;
+    color: white;
+    height: 60px; 
+    font-size: 30px;
+}
+
+section details summary{
+    background-color: gray;
+    padding: 2%;
+    color: white;
+    font-size: 20px;
+}
+
+footer p{
+    color: white;
+    background: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 10px;
+}
+
+/*Estrutura do load*/
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color:slateblue;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: blue;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading{
+    from{
+      transform: rotate(0turn);
+    }
+    to{
+      transform: rotate(1turn);
+    }
+}

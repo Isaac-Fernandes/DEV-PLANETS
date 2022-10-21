@@ -1,0 +1,440 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+html, body {
+    height: 100%;
+}
+
+body{
+   background-color: black;
+}
+
+/*Configuração para logo*/
+label.logo{/*logo*/
+    color: red;
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*Todas as configurações da NAVBAR*/
+nav{ /*Configuração para NAVBAR*/
+    background: black;/*Cor da NAVBAR*/
+    height: 80px;
+    width: 100%;
+}
+
+nav ul{/*Leva os links para a direita*/
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{/*Transforma os links de coluna para lista*/
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{/*Configuração para os links*/
+    color: white;/*Cor dos links*/
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+nav a:hover{/*Trocar a cor dos links ao passar o mouse por cima*/
+    color: grey;/*Cor de quando o mouse passar o mouse por cima*/
+}
+
+/*Configuração para o ícone*/
+.checkbtn{
+    font-size: 30px;/*tamanho ícone*/
+    color: white;/*Cor da logo*/
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;/*quando o mouse passa por cima aparece uma mão*/
+    display: none;/*O ícone não aparece quando não está responsivo*/
+}
+
+#check{
+    display: none;/*Para sair uma caixinha de verificação*/
+}
+
+/*Imagem de fundo do home*/
+.home{
+  background-image: url(../img/home/home.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  align-items:center;
+}
+/*Conteudo do modal*/
+.titulo, .descricao{
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.toque{
+  color: black;
+  border-radius: 100px;
+  margin-left: 667px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #fafafa;
+  padding: 0;
+  max-height: 70%;
+  width: 55%;
+  margin: auto;
+  overflow-y: auto;
+  border-radius: 2px;
+  will-change: top, opacity;
+}
+
+.modal:focus {
+  outline: none;
+}
+  
+  @media only screen and (max-width: 992px) {
+    .modal {
+      width: 80%;
+    }
+  }
+  
+  .modal h1, .modal h2, .modal h3, .modal h4 {
+    margin-top: 0;
+  }
+  
+  .modal .modal-content {
+    padding: 24px;
+  }
+  
+  .modal .modal-close {
+    cursor: pointer;
+  }
+  
+  .modal .modal-footer {
+    border-radius: 0 0 2px 2px;
+    background-color: #fafafa;
+    padding: 4px 6px;
+    height: 56px;
+    width: 100%;
+    text-align: right;
+  }
+  
+  .modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-small, .modal .modal-footer .btn-flat {
+    margin: 6px 0;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    z-index: 999;
+    top: -25%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 125%;
+    width: 100%;
+    background: #000;
+    display: none;
+    will-change: opacity;
+  }
+  
+  .modal.modal-fixed-footer {
+    padding: 0;
+    height: 70%;
+  }
+  
+  .modal.modal-fixed-footer .modal-content {
+    position: absolute;
+    height: calc(100% - 56px);
+    max-height: 100%;
+    width: 100%;
+    overflow-y: auto;
+  }
+  
+  .modal.modal-fixed-footer .modal-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .modal.bottom-sheet {
+    top: auto;
+    bottom: -100%;
+    margin: 0;
+    width: 100%;
+    max-height: 45%;
+    border-radius: 0;
+    will-change: bottom, opacity;
+  }
+
+  .datepicker-modal {
+    max-width: 325px;
+    min-width: 300px;
+    max-height: none;
+  }
+  
+  .datepicker-container.modal-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+
+@media only screen and (min-width: 601px) {
+    .datepicker-modal {
+      max-width: 625px;
+    }
+    .datepicker-container.modal-content {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+    }
+}
+
+.timepicker-modal {
+    max-width: 325px;
+    max-height: none;
+}
+  
+.timepicker-container.modal-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+}
+
+@media only screen and (min-width: 601px) {
+    .timepicker-modal {
+      max-width: 600px;
+    }
+    .timepicker-container.modal-content {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+    }
+}
+
+button.btn.modal-trigger.toque.white{
+    color: #000;
+    font: 14px;
+    background: #fafafa;
+    padding: 0px 16px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+button.btn.modal-close.modal-action{
+    color: #ffffff;
+    font: 14px;
+    background:#26A69A;
+    margin: 6px;
+    border-radius: 10px;
+    padding:10px;
+}
+
+/*Carrosel de filmes*/
+.header-catalog{
+    float: right;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px 10px;
+}
+
+.header-catalog span{
+    float: right;
+    background-color: green;
+    border-radius: 10px;
+    padding: 3px 8px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 6px;
+}
+
+.todos{
+    color: white;
+}
+
+ span:hover{
+    background: white;
+}
+
+.todos:hover{
+    color: black;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+  background-color: white;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+.carousel.carousel-slider {
+  top: 0;
+  left: 0;
+}
+
+.carousel.carousel-slider .carousel-fixed-item {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.carousel.carousel-slider .carousel-fixed-item.with-indicators {
+  bottom: 68px;
+}
+
+.carousel.carousel-slider .carousel-item {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel.carousel-slider .carousel-item h2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.carousel.carousel-slider .carousel-item p {
+  font-size: 15px;
+}
+
+.carousel .carousel-item {
+  visibility: hidden;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel .carousel-item > img {
+  width: 100%;
+}
+
+.carousel .indicators {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+}
+
+.carousel .indicators .indicator-item {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 24px 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  border-radius: 50%;
+}
+
+.carousel .indicators .indicator-item.active {
+  background-color: #fff;
+}
+
+.carousel.scrolling .carousel-item .materialboxed,
+.carousel .carousel-item:not(.active) .materialboxed {
+  pointer-events: none;
+}
+
+/*Estrutura do load*/
+.loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: slateblue;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader-hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after{
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: blue;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading{
+  from{
+    transform: rotate(0turn);
+  }
+  to{
+    transform: rotate(1turn);
+  }
+}
